@@ -1,8 +1,42 @@
 @use "sass:color";
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
+$color-tertiary: hsl(165, 56%, 74%);
 $appPadding: 1rem;
+
+body,
+html {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin button($type) {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: rgb(104, 104, 104);
+  background-image: linear-gradient(
+    0deg,
+    color.scale($color-primary, $alpha: -10%) 0%,
+    color.scale($color-secondary, $alpha: -10%) 100%
+  );
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    background-color: white;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
 
 .container {
   max-width: 1280px;
