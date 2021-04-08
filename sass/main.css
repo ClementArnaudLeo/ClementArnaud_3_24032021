@@ -21,7 +21,7 @@
     transform: translateY(0);
   }
 }
-@keyframes lds-ring {
+@keyframes loader {
   0% {
     transform: rotate(0deg);
   }
@@ -82,16 +82,16 @@ html {
 .footer__Element:last-child {
   margin-bottom: 0;
 }
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
 .footer__link {
   color: white;
   text-decoration: none;
 }
 .footer__link:hover {
   text-decoration: underline;
-}
-.footer__icon {
-  width: 1.2rem;
-  margin-right: 0.5rem;
 }
 
 .loader {
@@ -109,7 +109,7 @@ html {
   margin: 8px;
   border: 8px solid #fff;
   border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: #9356dc transparent transparent transparent;
 }
 .loader div:nth-child(1) {
@@ -158,17 +158,16 @@ html {
   color: white;
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
-  cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-}
-.explore__btn:hover {
-  background-color: white;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 .explore__btn a {
   text-decoration: none;
   color: inherit;
+}
+.explore__btn:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
 .howto {
@@ -280,15 +279,15 @@ html {
   display: flex;
   align-items: center;
 }
-.card__content {
-  flex: 1;
-}
 .card__title {
   margin: 0;
   margin-bottom: 0.25rem;
 }
 .card__subtitle {
   margin: 0;
+}
+.card__content {
+  flex: 1;
 }
 .card__btn {
   height: 2rem;
@@ -301,7 +300,7 @@ html {
   justify-content: center;
 }
 .card__heart {
-  background-color: white !important;
+  background-color: white;
 }
 
 .header--Arrow {
@@ -353,7 +352,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   position: relative;
   background-color: black;
 }
@@ -413,10 +411,10 @@ html {
   content: "";
   width: 3rem;
   height: 0.25rem;
-  background-color: #98e2cf;
   position: absolute;
   left: 0;
   bottom: 0;
+  background-color: #98e2cf;
 }
 
 .menuItem {
@@ -424,13 +422,10 @@ html {
   padding: 1rem;
   display: flex;
   border-radius: 0.75rem;
+  overflow: hidden;
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  cursor: pointer;
-  animation: itemAppear 0.6s;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  animation-fill-mode: both;
+  animation: itemAppear 0.6s cubic-bezier(0.5, 1.58, 0.34, 0.82) both;
   transform: scale(0);
   max-width: 100%;
 }
@@ -440,11 +435,12 @@ html {
   overflow: hidden;
   flex: 1;
 }
-.menuItem__title {
-  margin: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.menuItem__price {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
 }
 .menuItem__description {
   margin: 0;
@@ -452,12 +448,11 @@ html {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menuItem__price {
-  font-weight: bold;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-left: 0.5rem;
+.menuItem__title {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menuItem__confirm {
   background-color: #98e2cf;
@@ -471,6 +466,9 @@ html {
 .menuItem:hover .menuItem__confirm {
   margin-right: -1rem;
 }
+.menuItem:hover .menuItem__wrapIcon {
+  transform: rotate(0);
+}
 .menuItem__wrapIcon {
   height: 1.6rem;
   width: 1.6rem;
@@ -481,9 +479,6 @@ html {
   border-radius: 100px;
   transform: rotate(180deg);
   transition-duration: 0.5s;
-}
-.menuItem:hover .menuItem__wrapIcon {
-  transform: rotate(0);
 }
 .menuItem__icon {
   color: #98e2cf;
@@ -541,17 +536,16 @@ html {
   color: white;
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
-  cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-}
-.orderBtn:hover {
-  background-color: white;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 .orderBtn a {
   text-decoration: none;
   color: inherit;
+}
+.orderBtn:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=main.css.map */

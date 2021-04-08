@@ -40,7 +40,7 @@
   }
 
   &__title {
-    font-family: 'Shrikhand', 'cursive';
+    font-family: "Shrikhand", "cursive";
   }
 
   &__btn {
@@ -52,7 +52,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     position: relative;
     background-color: black;
 
@@ -63,7 +62,7 @@
     &::before {
       opacity: 0;
       transition: 0.5s;
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -121,13 +120,13 @@
     font-weight: normal;
 
     &::after {
-      content: '';
+      content: "";
       width: 3rem;
       height: 0.25rem;
-      background-color: $color-tertiary;
       position: absolute;
       left: 0;
       bottom: 0;
+      background-color: $color-tertiary;
     }
   }
 }
@@ -137,13 +136,10 @@
   padding: 1rem;
   display: flex;
   border-radius: 0.75rem;
+  overflow: hidden;
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  cursor: pointer;
-  animation: itemAppear 0.6s;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  animation-fill-mode: both;
+  animation: itemAppear 0.6s cubic-bezier(0.5, 1.58, 0.34, 0.82) both;
   transform: scale(0);
   max-width: 100%;
 
@@ -154,11 +150,12 @@
     flex: 1;
   }
 
-  &__title {
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  &__price {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 0.5rem;
   }
 
   &__description {
@@ -168,12 +165,11 @@
     overflow: hidden;
   }
 
-  &__price {
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: 0.5rem;
+  &__title {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   &__confirm {
@@ -190,6 +186,10 @@
     margin-right: -1rem;
   }
 
+  &:hover &__wrapIcon {
+    transform: rotate(0);
+  }
+
   &__wrapIcon {
     height: 1.6rem;
     width: 1.6rem;
@@ -200,10 +200,6 @@
     border-radius: 100px;
     transform: rotate(180deg);
     transition-duration: 0.5s;
-  }
-
-  &:hover &__wrapIcon {
-    transform: rotate(0);
   }
 
   &__icon {
