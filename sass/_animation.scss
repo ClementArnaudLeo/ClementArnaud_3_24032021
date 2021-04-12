@@ -1,9 +1,33 @@
+@-webkit-keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @keyframes itemAppear {
   0% {
     transform: scale(0);
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@-webkit-keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -22,6 +46,15 @@
   }
 }
 
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes loader {
   0% {
     transform: rotate(0deg);
@@ -31,12 +64,30 @@
   }
 }
 
+@-webkit-keyframes disapearBackground {
+   0%{
+    height: 100%;
+  }
+  100%{
+    height: 0px;
+  }
+}
+
 @keyframes disapearBackground {
    0%{
     height: 100%;
   }
   100%{
     height: 0px;
+  }
+}
+
+@-webkit-keyframes disapearLoader{
+  0%{
+    left: 50%;
+  }
+  100%{
+    left: -50%;
   }
 }
 

@@ -7,7 +7,8 @@
   top: 0px;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 10000;
-  animation: disapearBackground 0s 2s ease forwards;
+  -webkit-animation: disapearBackground 0s 2s ease forwards;
+          animation: disapearBackground 0s 2s ease forwards;
 }
 
 .loader {
@@ -18,7 +19,9 @@
   width: 80px;
   height: 80px;
   
-  animation: disapearLoader 0s 2s ease forwards;
+  -webkit-animation: disapearLoader 0s 2s ease forwards;
+  
+          animation: disapearLoader 0s 2s ease forwards;
 
   div {
     box-sizing: border-box;
@@ -29,17 +32,21 @@
     margin: 8px;
     border: 8px solid #fff;
     border-radius: 50%;
-    animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    -webkit-animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: $color-primary transparent transparent transparent;
 
     &:nth-child(1) {
-      animation-delay: -0.45s;
+      -webkit-animation-delay: -0.45s;
+              animation-delay: -0.45s;
     }
     &:nth-child(2) {
-      animation-delay: -0.3s;
+      -webkit-animation-delay: -0.3s;
+              animation-delay: -0.3s;
     }
     &:nth-child(3) {
-      animation-delay: -0.15s;
+      -webkit-animation-delay: -0.15s;
+              animation-delay: -0.15s;
     }
   }
 }
@@ -155,7 +162,8 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
   row-gap: 2rem;
 
   @media (min-width: 64rem) {
@@ -177,7 +185,8 @@
     border: transparent solid 0px;
     border-radius: 1rem 1rem 0 0;
     box-shadow: none;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   &__badge {
